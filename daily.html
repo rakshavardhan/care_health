@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Daily Report</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="number"], input[type="date"] {
+            width: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .conditional-group {
+            margin-top: 10px;
+            display: none;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .submit-btn {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Submit Your Daily Report</h1>
+    <form id="dailyReportForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="report">Daily Report:</label>
+            <textarea id="report" name="report" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="bloodPressure">Blood Pressure (mm Hg):</label>
+            <input type="text" id="bloodPressure" name="bloodPressure" placeholder="e.g., 120/80" required>
+        </div>
+
+        <div class="form-group">
+            <label for="calories">Calories Burnt:</label>
+            <input type="number" id="calories" name="calories" required>
+        </div>
+
+        <div class="form-group">
+            <label>Diabetic:</label>
+            <input type="radio" id="diabeticYes" name="diabetic" value="yes"> Yes
+            <input type="radio" id="diabeticNo" name="diabetic" value="no" checked> No
+        </div>
+
+        <div class="conditional-group" id="sugarLevelGroup">
+            <div class="form-group">
+                <label for="sugarLevel">Sugar Level:</label>
+                <input type="number" id="sugarLevel" name="sugarLevel" step="any">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sleep">Sleep Hours:</label>
+            <input type="number" id="sleep" name="sleep" step="any" required>
+        </div>
+
+        <div class="form-group">
+            <label for="water">Water Consumption (liters):</label>
+            <input type="number" id="water" name="water" min="0" step="any" required>
+        </div>
+
+        <div class="form-group">
+            <label>Exercise:</label>
+            <input type="radio" id="exerciseYes" name="exercise" value="yes"> Yes
+            <input type="radio" id="exerciseNo" name="exercise" value="no" checked> No
+        </div>
+
+        <div class="conditional-group" id="exerciseDurationGroup">
+            <div class="form-group">
+                <label for="exerciseDuration">How many minutes did you exercise?</label>
+                <input type="number" id="exerciseDuration" name="exerciseDuration" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="meals">Number of Meals Taken:</label>
+            <input type="number" id="meals" name="meals" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="heartRate">Heart Rate (bpm):</label>
+            <input type="number" id="heartRate" name="heartRate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pain">Did you experience any pain?</label>
+            <input type="radio" id="painYes" name="pain" value="yes"> Yes
+            <input type="radio" id="painNo" name="pain" value="no" checked> No
+        </div>
+
+        <div class="conditional-group" id="painLocationGroup">
+            <div class="form-group">
+                <label for="painLocation">Where did you experience pain?</label>
+                <select id="painLocation" name="painLocation">
+                    <option value="head">Head</option>
+                    <option value="neck">Neck</option>
+                    <option value="back">Back</option>
+                    <option value="shoulders">Shoulders</option>
+                    <option value="knees">Knees</option>
+                    <option value="feet">Feet</option>
+                    <option value="other">chest</option>
+                    <option value="other">arm</option>
+                    <option value="other">abdomen</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('diabeticYes').addEventListener('change', function() {
+        document.getElementById('sugarLevelGroup').style.display = 'block';
+    });
+
+    document.getElementById('diabeticNo').addEventListener('change', function() {
+        document.getElementById('sugarLevelGroup').style.display = 'none';
+    });
+
+    document.getElementById('exerciseYes').addEventListener('change', function() {
+        document.getElementById('exerciseDurationGroup').style.display = 'block';
+    });
+
+    document.getElementById('exerciseNo').addEventListener('change', function() {
+        document.getElementById('exerciseDurationGroup').style.display = 'none';
+    });
+
+    document.getElementById('painYes').addEventListener('change', function() {
+        document.getElementById('painLocationGroup').style.display = 'block';
+    });
+
+    document.getElementById('painNo').addEventListener('change', function() {
+        document.getElementById('painLocationGroup').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>

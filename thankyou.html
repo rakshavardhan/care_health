@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report Recorded</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 80%;
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+      
+        h1 {
+            font-size: 2rem;
+            color: #2d87f0;
+            margin-bottom: 20px;
+        }
+x
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        
+        .btn {
+            background-color: #2d87f0;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #2185d0;
+            transform: scale(1.05);
+        }
+
+       
+        .btn:focus {
+            outline: none;
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Your Daily Report Has Been Recorded</h1>
+        <p>Thank you for submitting your daily report. Your data is safe with us!</p>
+        <button class="btn" onclick="window.location.href='index.html'">Go Back Home</button>
+    </div>
+
+</body>
+</html>

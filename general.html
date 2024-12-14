@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="file"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .form-group input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    .form-group .inline {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #5cb85c;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tell Us About You</h1>
+    <form id="healthForm" method="POST" action="process_form.php">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+    
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="inline"><input type="radio" name="gender" value="male"> Male</div>
+            <div class="inline"><input type="radio" name="gender" value="female"> Female</div>
+            <div class="inline"><input type="radio" name="gender" value="others"> Others</div>
+        </div>
+    
+        <div class="form-group">
+            <label>Smoking</label>
+            <div class="inline"><input type="radio" name="smoking" value="yes"> Yes</div>
+            <div class="inline"><input type="radio" name="smoking" value="no"> No</div>
+        </div>
+    
+        <div class="form-group">
+            <label>Alcohol Consumption</label>
+            <div class="inline"><input type="radio" name="alcohol" value="yes"> Yes</div>
+            <div class="inline"><input type="radio" name="alcohol" value="no"> No</div>
+        </div>
+    
+        <div class="form-group">
+            <label for="surgery">Any Major Surgery</label>
+            <textarea id="surgery" name="surgery" placeholder="If yes, provide details"></textarea>
+        </div>
+    
+        <div class="form-group">
+            <label for="profession">Profession</label>
+            <input type="text" id="profession" name="profession">
+        </div>
+    
+        <div class="form-group">
+            <label for="bmi">BMI</label>
+            <input type="number" id="bmi" name="bmi" step="0.1">
+        </div>
+    
+        <div class="form-group">
+            <label for="bloodGroup">Blood Group</label>
+            <input type="text" id="bloodGroup" name="bloodGroup">
+        </div>
+    
+        <div class="form-group">
+            <label>Allergies</label>
+            <div class="inline"><input type="radio" name="allergies" value="yes"> Yes</div>
+            <div class="inline"><input type="radio" name="allergies" value="no"> No</div>
+        </div>
+    
+        <div class="form-group">
+            <label>Any Chronic Pain</label>
+            <div class="inline"><input type="radio" name="chronicPain" value="yes"> Yes</div>
+            <div class="inline"><input type="radio" name="chronicPain" value="no"> No</div>
+            <div class="form-group">
+                <label for="painArea">Where do you feel pain? (if any)</label>
+                <input type="text" id="painArea" name="painArea">
+            </div> 
+        </div>
+    
+        <button type="submit">Submit</button>
+    </form>
+    
+  </div>
+
+  
+</body>
+</html>

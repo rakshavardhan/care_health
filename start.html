@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .important-text {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        .start-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .start-btn:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .start-btn:active {
+            background-color: #388e3c;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-section {
+            background-color: #eef2f7;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .info-section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .info-section ul {
+            list-style: none;
+            text-align: left;
+            font-size: 16px;
+            color: #666;
+        }
+        .info-section ul li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .start-btn {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Start Tracking Your Activities</h1>
+    <div class="info-section">
+        <h2>Important Information</h2>
+        <p>We value your privacy and need your consent to track your activities and health data. By clicking the button below, you agree to the following:</p>
+        <ul>
+            <li>Your activities, such as exercise, sleep, and water intake, will be tracked.</li>
+            <li>Your data will be securely stored and used to provide personalized recommendations.</li>
+            <li>You can opt-out of the tracking at any time by contacting support.</li>
+        </ul>
+    </div>
+    <button class="start-btn" onclick="startTracking()">Start Tracking</button>
+</div>
+
+<script>
+    function startTracking() {
+        window.location.href = "daily.html"; // Redirect to daily.html
+    }
+</script>
+
+</body>
+</html>

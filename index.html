@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f8fafc, #e3f2fd);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #6200ea, #45009d);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+            color: #333;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            background: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #45009d;
+            transform: scale(1.05);
+        }
+
+        .hero img {
+            max-width: 400px;
+            border-radius: 10px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .center a {
+            padding: 12px 30px;
+            font-size: 1rem;
+            background: #6200ea;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .center a:hover {
+            background: #45009d;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 60px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #f39c12;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 10px 0;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #f39c12;
+        }
+
+        .footer-column ul li span {
+            color: #ddd;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer .social-icons a {
+            color: #ddd;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #f39c12;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    header {
+        background: linear-gradient(45deg, #6200ea, #45009d);
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-container img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .logo-container .logo-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    header nav a:hover {
+        color: #ffcc00;
+    }
+
+    header nav a button {
+        background: none;
+        border: 1px solid white;
+        color: white;
+        padding: 5px 15px;
+        font-weight: bold;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    header nav a button:hover {
+        background: white;
+        color: #6200ea;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+        <div class="logo">Care health</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">about</a>
+            <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/14/02/20241214022659-96KUHU5S.json">Ai Assist</a>
+            <a href="#">services</a>
+            <a href="login.html"><button>login</button></a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Welcome to care health</h1>
+            <p>Explore and enjoy our features.</p>
+        </div>
+        <img src="4.jpg" alt="Welcome Image">
+    </section>
+
+    <div class="center">
+        <a href="feedback.html">Submit Feedback</a>
+    </div>
+    <<footer class="footer">
+        <div class="footer-column">
+            <h3>Social Media</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Emails</h3>
+            <ul>
+                <li><a href="mailto:info@example.com">info@example.com</a></li>
+                <li><a href="mailto:support@example.com">support@example.com</a></li>
+                <li><a href="mailto:careers@example.com">careers@example.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Phone Numbers</h3>
+            <ul>
+                <li><span>+91-7788996655</span></li>
+                <li><span>+91-9988776655</span></li>
+                <li><span>+91-8822334455</span></li>
+            </ul>
+        </div>
+    
+</body>
+</html>
